@@ -69,4 +69,8 @@ export class AppComponent {
     this.contactProfil = contactClique;
 
   }
+// la fonction est automatiquement appelée par angular lorsqu'un nouveau contact est créé'
+  addContact(contact): void {
+this.mesContacts.push(contact);
+  }
 }

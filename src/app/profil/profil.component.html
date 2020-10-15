@@ -1,0 +1,16 @@
+      <div class="jumbotron" *ngIf="contactProfil"> <!-- *ngIf => condition / *ngFor => boucle -->
+        <h1 class="display-4">{{contactProfil.name}}</h1>
+        <p class="lead">{{contactProfil.email}}</p>
+        <p class="lead">{{contactProfil.tel}}</p>
+        <hr class="my-4">
+        <input type="text"
+               [(ngModel)]="contactProfil.name" class="form-control">
+        <!-- [(ngModel)] ==> to way data binding => appeler aussi "the banana in the box"
+      Le model impact le vue
+      La vue impacte le model (quand tu modifie la vue, cela modofie le model -->
+      </div>
+      <div class="jumbotron" *ngIf="!contactProfil"> <!-- *ngIf => condition / *ngFor => boucle -->
+        <h1 class="display-4">Mes ontacts</h1>
+        <p class="lead">Choisissez votre contact à gauche</p>
+        <hr class="my-4">
+      </div>
